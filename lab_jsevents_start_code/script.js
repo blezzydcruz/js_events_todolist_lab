@@ -8,6 +8,7 @@ const showDate = document.querySelector("#showDate");
 // DECLARE VARIABLES WITH GLOBAL SCOPE
 let item;
 let deleteButton;
+let completeButton;
 
 //  Text Input
 todo.addEventListener("input", (event) => {
@@ -22,16 +23,28 @@ button.addEventListener("click", () => {
     // CREATE DELETE BUTTON
     let deleteButton = document.createElement("deleteButton");
     deleteButton.innerText = "  Delete";
+
+    let completeButton = document.createElement("completeButton");
+    completeButton.innerText = "    Complete"
     
     // ADD TO LIST
     list.appendChild(newItem);
     // DELETE FROM LIST
     newItem.appendChild(deleteButton);
+    newItem.appendChild(completeButton);
+
+    // CHANGES COLOR OF COMPLETED CHORES TO PINK
+    completeButton.addEventListener("click", (event) => {
+        newItem.style.color = "pink";
+        // newItem.textContent = "change text";
+     });
 
     // DECLARE FUNCTION WITHIN FUNCTION
     deleteButton.addEventListener("click", () => {
         list.removeChild(newItem);
-   
-})
 
+
+
+    })
+   
 })
