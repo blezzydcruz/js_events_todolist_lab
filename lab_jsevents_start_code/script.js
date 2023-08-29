@@ -4,6 +4,7 @@ const button = document.querySelector("#enter");
 const todo = document.querySelector("#new-todo");
 const list = document.querySelector("#list");
 const showDate = document.querySelector("#showDate");
+const completedList = document.querySelector("#completed list");
 
 // DECLARE VARIABLES WITH GLOBAL SCOPE
 let item;
@@ -35,16 +36,18 @@ button.addEventListener("click", () => {
 
     // CHANGES COLOR OF COMPLETED CHORES TO PINK
     completeButton.addEventListener("click", (event) => {
-        newItem.style.color = "pink";
+        newItem.style.color = "gray";
         // newItem.textContent = "change text";
+        completedList.appendChild(newItem);
+        list.removeChild(newItem);
      });
 
     // DECLARE FUNCTION WITHIN FUNCTION
     deleteButton.addEventListener("click", () => {
         list.removeChild(newItem);
 
-
-
     })
    
 })
+
+
