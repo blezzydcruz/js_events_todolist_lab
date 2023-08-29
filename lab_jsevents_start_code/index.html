@@ -14,7 +14,7 @@
             <h1>ToDo List</h1>
         </div>
 
-        <form action="">
+        <form action="" id="form">
             <input type="text" placeholder="Add a new item" id="new-todo">
             <button type="button" id="enter">Enter!</button>
         </form>
@@ -23,6 +23,10 @@
             <!-- items on ToDo list go here! -->
         </ul>
 
+        <button id="showDate" type="button"
+         onclick="document.getElementById('date button').innerHTML = Date()">Show Date</button>
+         
+         <p id="date button"></p>
     </div>
     
 </body>
