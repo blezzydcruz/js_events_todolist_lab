@@ -1,3 +1,4 @@
+<!-- SET-UP -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,8 @@
     <script src="script.js" type="text/javascript" defer></script>
     <title>ToDo List</title>
 </head>
+
+
 <body>
     <div class="container">
 
@@ -14,6 +17,7 @@
             <h1>ToDo List</h1>
         </div>
 
+        <!-- CREATES FORM AND BUTTON FOR INPUTTING TASKS -->
         <form action="" id="form">
             <input type="text" placeholder="Add a new item" id="new-todo">
             <button type="button" id="enter">Enter!</button>
@@ -23,9 +27,9 @@
             <!-- items on ToDo list go here! -->
         </ul>
 
+        <!-- CREATES BUTTON TO SHOW CURRENT DATE AND TIME -->
         <button id="showDate" type="button"
          onclick="document.getElementById('date button').innerHTML = Date()">Show Date</button>
-         
          <p id="date button"></p>
     </div>
     
